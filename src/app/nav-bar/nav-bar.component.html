@@ -1,0 +1,58 @@
+<div class="main">
+  <div class="nav-logo">
+    <img src="/assets/Logo.webp" alt="logo" />
+  </div>
+  <div class="nav-center">
+    <ul class="nav-center-ul">
+      <li>Home <i class="fa-solid fa-chevron-down"></i></li>
+      <li class="select">
+        catalog <i class="fa-solid fa-chevron-down"></i>
+        <div class="opt">
+          <div>Earrings</div>
+          <div>Purse</div>
+          <div>Bookmarks</div>
+          <div>Key Chain</div>
+          <div>wall Hangings</div>
+          <div>Hair accessories</div>
+        </div>
+      </li>
+      <li>special Price</li>
+      <li>contact</li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <ul class="nav-right-ul">
+
+      <li class="currency">
+        <button mat-button [matMenuTriggerFor]="menu">INR</button>
+        <mat-menu #menu="matMenu" class="cur-opt">
+          <button mat-menu-item class="cur">
+            <img src="/assets/eur.webp" alt=""  class="cur-img"/>
+            <div class="">Eur</div>
+          </button>
+          <button mat-menu-item class="cur">
+            <img src="/assets/usd.jpg" alt=""  class="cur-img"/>
+            <div class="">Usd</div>
+          </button>
+          <button mat-menu-item class="cur">
+            <img src="/assets/gbp.webp" alt="" class="cur-img" />
+            <div class="">gbp</div>
+          </button>
+        </mat-menu>
+      </li>
+
+
+      <li><i class="fa-solid fa-magnifying-glass"></i></li>
+      <li>
+        <i class="fa-regular fa-heart heart">
+          <span>0</span>
+        </i>
+      </li>
+      <li>
+        <i class="fa-solid fa-cart-shopping cart">
+          <span>2</span>
+        </i>
+      </li>
+    </ul>
+  </div>
+</div>

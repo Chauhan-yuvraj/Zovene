@@ -1,0 +1,144 @@
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 10svh;
+  align-items: center;
+  padding: 0 1.8rem;
+  font-size: small;
+  font-weight: 500;
+  border: 0.1px solid #e5e5e5;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+  .nav-logo {
+    flex-basis: 5%;
+    img {
+      width: 3.5rem;
+      cursor: pointer;
+    }
+  }
+
+  .nav-center {
+    flex-basis: 75%;
+    .nav-center-ul {
+      height: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 2rem;
+      text-transform: uppercase;
+
+      li {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+          color: #b1af97;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: #b1af97;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+
+      .select {
+        position: relative;
+
+        &:hover .opt {
+          display: flex;
+        }
+
+        .opt {
+          display: none;
+          flex-direction: column;
+          gap: 0.1rem;
+          font-weight: 500;
+          text-transform: capitalize;
+          position: absolute;
+          background-color: white;
+          padding-top: 15px;
+          padding-inline: 10px;
+          font-size: 1rem;
+          transition: all 0.35s ease;
+
+          div {
+            padding: 5px;
+            color: #b1af97;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-right {
+    flex-basis: 20%;
+    .nav-right-ul {
+      display: flex;
+      gap: 1rem;
+      justify-content: end;
+
+      li {
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+          color: #b1af97;
+        }
+      }
+    }
+  }
+}
+
+.currency {
+  position: relative;
+  cursor: pointer;
+  button {
+    color: #b1af97;
+  }
+}
+.cur {
+  display: flex;
+  flex-direction: row;
+  .cur-img {
+    width: 30px;
+  }
+}
+.heart,
+.cart {
+  position: relative;
+  display: flex;
+  justify-content: end;
+
+  span {
+    padding: 0.2rem;
+    top: -10px;
+    right: -8px;
+    position: absolute;
+    font-size: 0.5rem;
+    color: #000;
+    background-color: #b3a398;
+    border-radius: 100%;
+  }
+}
